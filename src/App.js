@@ -1,9 +1,10 @@
 import React from 'react';
+import {CommentContainer} from "./components/commentContainer";
 
 const App = () => {
     return (
         <div>
-            App
+            <CommentContainer/>
         </div>
     );
 };
