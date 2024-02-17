@@ -1,4 +1,4 @@
-import {createBrowserRouter, Navigate, NavLink} from "react-router-dom";
+import {createBrowserRouter, Navigate} from "react-router-dom";
 import {TodosPage} from "./pages/TodosPage";
 import {CommentsPage} from "./pages/CommentsPage";
 import {AlbumsPage} from "./pages/AlbumsPage";
