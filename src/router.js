@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import {createBrowserRouter, Navigate, NavLink} from "react-router-dom";
 import {TodosPage} from "./pages/TodosPage";
 import {CommentsPage} from "./pages/CommentsPage";
 import {AlbumsPage} from "./pages/AlbumsPage";
@@ -8,6 +8,9 @@ import {PostsPage} from "./pages/PostsPage";
 const router = createBrowserRouter([
     {
         path:'', element: <MainLayout/>, children:[
+            {
+                index:true, element:<Navigate to={'todos'}/>
+            },
             {
                 path:'todos', element: <TodosPage/>
             },
