@@ -13,7 +13,7 @@ const Episode = ({episoder}) => {
         const ids = characters.map(character => character.split('/').slice(-1)[0]).join(',');
         setName(name)
         navigate(`/characters/${ids}`)
-    };
+    }
 
     return (
         <div className={css.Episode} onClick={toCharacters}>
