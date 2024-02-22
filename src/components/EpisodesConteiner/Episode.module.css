@@ -1,0 +1,21 @@
+.Episode{
+
+    border: 1px black solid;
+    width: 19%;
+}
+
+.Episodes{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Episode:hover{
+    background-color: yellow;
+}
+
