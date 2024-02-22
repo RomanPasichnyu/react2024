@@ -3,12 +3,15 @@ import css from './Episode.module.css'
 import {useNavigate} from "react-router-dom";
 import {useAppContext} from "../../hoc/useAppContext";
 
+
 const Episode = ({episoder}) => {
     const {id, name, air_date, episode, characters} = episoder;
     const navigate = useNavigate();
+    const [, setName] = useAppContext();
 
     function toCharacters() {
         const ids = characters.map(character => character.split('/').slice(-1)[0]).join(',');
+        setName(name)
         navigate(`/characters/${ids}`)
     };
 

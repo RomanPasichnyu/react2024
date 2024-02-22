@@ -5,14 +5,12 @@ const Context = createContext(null)
 
 
 const ContextProvider = ({children}) => {
-    const state = useState(null)
+    const state= useState(null)
     return (
-        <div>
-            <ContextProvider value={state}>
-                {children}
-            </ContextProvider>
-        </div>
+        <Context.Provider value={state}>
+            {children}
+        </Context.Provider>
     );
 };
 
-export {Context, ContextProvider};
+export {ContextProvider, Context};
