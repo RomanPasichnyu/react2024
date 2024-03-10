@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import {useSearchParams} from "react-router-dom";
-import {episodesService} from "../../services/episodesService";
 import {useDispatch, useSelector} from "react-redux";
 import {episodesActions} from "../../store";
 import Episode from "./Episode";
@@ -9,7 +8,7 @@ import css from './styleAll.module.css'
 
 const Episodes = () => {
 
-    const [query, setQuery] = useSearchParams({page: '1'});
+    const [query, ] = useSearchParams({page: '1'});
 
     const page = query.get('page');
 
@@ -19,7 +18,7 @@ const Episodes = () => {
     const {episodes} = useSelector(state => state.episodes);
 
     useEffect(() => {
-        episodesService.getAll(page).then(({data})=>dispatch(episodesActions.setEpisodes(data)))
+        dispatch(episodesActions.getAll({page}))
     }, [page]);
 
 
